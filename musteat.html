@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="musteat.pageTitle">必吃菜式</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <button class="menu">&#9776;</button>
+    <h1 data-i18n="musteat.pageTitle">必吃菜式</h1>
+    <button class="lang-toggle" id="langToggle" type="button" onclick="toggleLang(); return false;">繁</button>
+    <nav>
+    <ul>
+        <li><a href="index.html" data-i18n="nav.about">關於我們</a></li>
+        <li><a href="info.html" data-i18n="nav.news">最新資訊</a></li>
+        <li><a href="brand.html" data-i18n="nav.brand">品牌介紹</a></li>
+        <li><a href="musteat.html" data-i18n="nav.musteat">必吃菜式</a></li>
+        <li><a href="shopinfo.html" data-i18n="nav.shopinfo">門市資訊</a></li>
+        <li><a href="recruit.html" data-i18n="nav.recruit">人才招聘</a></li>
+    </ul>
+    </nav>
+    </header>
+    <main>
+        <section class="musteat">
+            <h2 data-i18n="musteat.title">大馬椰絲燒雞</h2>
+            <P><strong data-i18n="musteat.subtitle">馬來西亞經典，每日限量奉送！</strong></P>
+            <P><a href="https://wa.me/85257977635?text=我想預約訂位" data-i18n="musteat.button" data-i18n-href="slogan.whatsapp">立即預約訂座</a></P>
+            </section>
+
+    </section>
+
+    <section class="musteatmenu">
+        <div>
+            <img src="images/me1.jpeg" alt="咖哩軟殼蟹農夫包">
+            <h3 data-i18n="musteat.item1.name">咖哩軟殼蟹農夫包</h3>
+            <p data-i18n="musteat.item1.desc">待更新描述</p>
+        </div>
+        <div>
+            <img src="images/me2.jpeg" alt="海南雞喇沙摻摻">
+            <h3 data-i18n="musteat.item2.name">海南雞喇沙摻摻</h3>
+            <p data-i18n="musteat.item2.desc">待更新描述</p>
+        </div>
+        <div>
+            <img src="images/me3.jpeg" alt="大頭蝦喇沙">
+            <h3 data-i18n="musteat.item3.name">大頭蝦喇沙</h3>
+            <p data-i18n="musteat.item3.desc">待更新描述</p>
+        </div>
+    </section>
+
+    <section class="musteatmenu2">
+        <div>
+            <img src="images/me4.jpeg" alt="娘惹烤豬五花腩">
+            <h3 data-i18n="musteat.item4.name">娘惹烤豬五花腩</h3>
+            <p data-i18n="musteat.item4.desc">待更新描述</p>
+        </div>
+        <div>
+            <img src="images/me5.jpeg" alt="新加坡黑胡椒炒龍蝦尾">
+            <h3 data-i18n="musteat.item5.name">新加坡黑胡椒炒龍蝦尾</h3>
+            <p data-i18n="musteat.item5.desc">待更新描述</p>
+        </div>
+        <div>
+            <img src="images/me6.jpeg" alt="巴東牛肉">
+            <h3 data-i18n="musteat.item6.name">巴東牛肉</h3>
+            <p data-i18n="musteat.item6.desc">待更新描述</p>
+        </div>
+    </section>
+    </main> 
+    <footer>
+        <p data-i18n="footer.copyright">Copyright © 2026 NITTAYA（HONG KONG）LIMITED All Rights Reserved.</p>
+    </footer>
+    <footer class="gptl">
+        <p data-i18n="footer.powered">Powered by Go Point Technology Limited</p>
+    </footer>
+    <script>
+        // ========== 語言切換系統 ==========
+        const translations = {
+            "zh-HK": {
+                "title": "必吃菜式",
+                "nav": {"about": "關於我們", "news": "最新資訊", "brand": "品牌介紹", "musteat": "必吃菜式", "shopinfo": "門市資訊", "recruit": "人才招聘"},
+                "slogan": {"whatsapp": "我想預約訂位"},
+                "musteat": {
+                    "pageTitle": "必吃菜式",
+                    "title": "大馬椰絲燒雞",
+                    "subtitle": "馬來西亞經典，每日限量奉送！",
+                    "button": "立即預約訂座",
+                    "item1": {"name": "咖哩軟殼蟹農夫包", "desc": "新鮮的軟殼蟹採用濃郁的咖喱調料精心烹製，搭配松軟的農夫包，外皮酥脆，內裡嫩滑。每一口都散發著咖喱的香氣與獨特的風味，絕對是喜歡咖喱和新鮮口感的食客的首選。"},
+                    "item2": {"name": "海南雞喇沙摻摻", "desc": "結合了經典海南雞飯的嫩滑雞肉與香辣喇沙的獨特風味，米線與雞肉相互交融，湯底醇厚，添加了新鮮的香菜和豆芽，帶來豐富的口感與層次，是不可錯過的創意美食。"},
+                    "item3": {"name": "大頭蝦喇沙", "desc": "使用新鮮的大頭蝦作為主要配料，搭配濃郁的椰漿與香料熬製的喇沙湯底。米粉與鮮蝦的完美結合，使每一口都滿溢濃郁的海鮮風味，帶來一場舌尖上的盛宴。"},
+                    "item4": {"name": "娘惹烤豬五花腩", "desc": "採用傳統的娘惹風味調料腌製的豬五花腩，經過慢烤處理，表皮酥脆，肉質鮮嫩多汁。濃郁的香氣與豐富的口感，讓人一次次回味無窮。"},
+                    "item5": {"name": "新加坡黑胡椒炒龍蝦尾", "desc": "新鮮龍蝦尾與濃厚的黑胡椒醬炒製，淋上蒜蓉和香蔥，味道香濃。每一口都帶著黑胡椒的刺激與龍蝦的鮮甜，是一道人氣十足的美味佳餚。"},
+                    "item6": {"name": "巴東牛肉", "desc": "經典的巴東風味牛肉，採用優質牛肉與獨特香料慢燉而成，肉質鮮嫩入味，配上香氣四溢的米飯，令人垂涎欲滴，絕對是肉食愛好者的最愛。"}
+                },
+                "footer": {"copyright": "Copyright © 2026 NITTAYA（HONG KONG）LIMITED All Rights Reserved.", "powered": "Powered by Go Point Technology Limited"}
+            },
+            "zh-CN": {
+                "title": "必吃菜式",
+                "nav": {"about": "关于我们", "news": "最新资讯", "brand": "品牌介绍", "musteat": "必吃菜式", "shopinfo": "门店信息", "recruit": "人才招聘"},
+                "slogan": {"whatsapp": "我想预约订位"},
+                "musteat": {
+                    "pageTitle": "必吃菜式",
+                    "title": "大马椰丝烧鸡",
+                    "subtitle": "马来西亚经典，每日限量奉送！",
+                    "button": "立即预约订座",
+                    "item1": {"name": "咖喱软壳蟹农夫包", "desc": "新鲜的软壳蟹采用浓郁的咖喱调料精心烹制，搭配松软的农夫包，外皮酥脆，内里嫩滑。每一口都散发着咖喱的香气与独特的风味，绝对是喜欢咖喱和新鲜口感的食客的首选。"},
+                    "item2": {"name": "海南鸡喇沙拌拌", "desc": "结合了经典海南鸡饭的嫩滑鸡肉与香辣喇沙的独特风味，米线与鸡肉相互交融，汤底醇厚，添加了新鲜的香菜和豆芽，带来丰富的口感与层次，是不可错过的创意美食。"},
+                    "item3": {"name": "大头虾喇沙", "desc": "使用新鲜的大头虾作为主要配料，搭配浓郁的椰浆与香料熬制的喇沙汤底。米粉与鲜虾的完美结合，使每一口都满溢浓郁的海鲜风味，带来一场舌尖上的盛宴。"},
+                    "item4": {"name": "娘惹烤猪五花腩", "desc": "采用传统的娘惹风味调料腌制的猪五花腩，经过慢烤处理，表皮酥脆，肉质鲜嫩多汁。浓郁的香气与丰富的口感，让人一次次回味无穷。"},
+                    "item5": {"name": "新加坡黑胡椒炒龙虾尾", "desc": "新鲜龙虾尾与浓厚的黑胡椒酱炒制，淋上蒜蓉和香葱，味道香浓。每一口都带着黑胡椒的刺激与龙虾的鲜甜，是一道人气十足的美味佳肴。"},
+                    "item6": {"name": "巴东牛肉", "desc": "经典的巴东风味牛肉，采用优质牛肉与独特香料慢炖而成，肉质鲜嫩入味，配上香气四溢的米饭，令人垂涎欲滴，绝对是肉食爱好者的最爱。"}
+                },
+                "footer": {"copyright": "Copyright © 2026 NITTAYA（HONG KONG）LIMITED All Rights Reserved.", "powered": "Powered by Go Point Technology Limited"}
+            }
+        };
+        
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i=0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length); // Remove leading spaces
+                if (c.indexOf(nameEQ) === 0) {
+                    return c.substring(nameEQ.length, c.length);
+                }
+            }
+            return null;
+        }
+
+        let defaultLang = 'zh-CN';
+        let currentLang = null;
+        try {   
+            if(getCookie('lang') !== null){
+                currentLang = getCookie('lang');
+            } else {
+                currentLang = defaultLang;
+            }
+            setCookie('lang', currentLang, 7);
+        } catch(error){
+            setCookie('lang', defaultLang, 7);
+        }
+        
+        function getValue(obj, path) {
+            const keys = path.split('.');
+            let result = obj;
+            for (let i = 0; i < keys.length; i++) {
+                if (result && result[keys[i]]) {
+                    result = result[keys[i]];
+                } else {
+                    return undefined;
+                }
+            }
+            return result;
+        }
+        function updatePage() {
+            const lang = translations[currentLang];
+            if (!lang) return;
+            document.title = getValue(lang, 'musteat.pageTitle') || lang.title;
+            document.documentElement.lang = currentLang;
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                const key = el.getAttribute('data-i18n');
+                const value = getValue(lang, key);
+                if (value !== undefined) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.value = value;
+                    } else {
+                        el.innerHTML = value.replace(/\n/g, '<br>');
+                    }
+                }
+            });
+            document.querySelectorAll('[data-i18n-href]').forEach(function(el) {
+                const key = el.getAttribute('data-i18n-href');
+                const value = getValue(lang, key);
+                if (value !== undefined) {
+                    const href = el.getAttribute('href');
+                    const newHref = href.split('?text=')[0] + '?text=' + encodeURIComponent(value);
+                    el.setAttribute('href', newHref);
+                }
+            });
+            const btn = document.getElementById('langToggle');
+            if (btn) {
+                btn.textContent = currentLang === 'zh-HK' ? '繁' : '简';
+            }
+        }
+        function toggleLang() {
+            currentLang = currentLang === 'zh-HK' ? 'zh-CN' : 'zh-HK';
+            setCookie('lang', currentLang, 7);
+            updatePage();
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', updatePage);
+        } else {
+            updatePage();
+        }
+        document.querySelector('.menu') && document.querySelector('.menu').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            if (nav) nav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

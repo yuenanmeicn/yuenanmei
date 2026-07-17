@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="brand.title">品牌介紹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <button class="menu">&#9776;</button>
+    <h1 data-i18n="brand.title">品牌介紹</h1>
+    <button class="lang-toggle" id="langToggle" type="button" onclick="toggleLang(); return false;">繁</button>
+    <nav>
+    <ul>
+        <li><a href="index.html" data-i18n="nav.about">關於我們</a></li>
+        <li><a href="info.html" data-i18n="nav.news">最新資訊</a></li>
+        <li><a href="brand.html" data-i18n="nav.brand">品牌介紹</a></li>
+        <li><a href="musteat.html" data-i18n="nav.musteat">必吃菜式</a></li>
+        <li><a href="shopinfo.html" data-i18n="nav.shopinfo">門市資訊</a></li>
+        <li><a href="recruit.html" data-i18n="nav.recruit">人才招聘</a></li>
+    </ul>
+    </nav>
+    </header>
+    <main>
+        <section class="brandbackground">
+        <img src="images/brandbackground.jpeg" alt="西貢玥南妹">
+            <div class="branding">
+            <h2 data-i18n="brand.slogan1">「習慣熱情，分享風味」</h2>
+            <p data-i18n="brand.text1">我們不只是提供食物，更是傳遞一種「東南亞生活」的精神。<br>在多樣中尋找細緻，忙碌裡找到悠閒，熱鬧中擁有和諧。</p>
+            <p data-i18n="brand.text1b">不論生活如何變化，這裡總有：<br>一碗香氣四溢的喇沙，午夜的海南雞飯，<br>還有，一杯清涼的榴槤冰沙，洗去所有疲憊。</p>
+            <img src="images/brand1.jpeg" alt="西貢玥南妹">
+            </div>
+            <div class="branding">
+            <h2 data-i18n="brand.slogan2">「根植文化，敢於創新」</h2>
+            <p data-i18n="brand.text2">我們堅持傳承的同時，不會止步於模仿。<br>融合傳統特色與現代風味，創造別具一格的美食體驗。</p>
+            <img src="images/brand2.jpeg" alt="西貢玥南妹">
+            </div>
+            <div class="branding">
+            <h2 data-i18n="brand.slogan3">「日夜交織，東南亞韻味」</h2>
+            <p data-i18n="brand.text3">從早晨的湯粉，到晚間的串燒，伴隨城市的脈動。</p>
+            <img src="images/brand3.jpeg" alt="西貢玥南妹">
+            </div>
+            <div class="branding">
+            <h2 data-i18n="brand.slogan4">「本土文化，連接兩地！」</h2>
+            <p data-i18n="brand.text4">用勺子品味東南亞的味道。</p>
+            <img src="images/brand4.jpeg" alt="西貢玥南妹">
+            </div>       
+        </section>
+            
+            <section class="brandbackground2">
+
+                <img src="images/brand1.jpeg" alt="西貢玥南妹">
+                <div class="bd">
+                <h2 data-i18n="brand.slogan1">「習慣熱情，分享風味」</h2>
+                <p data-i18n="brand.text1">我們不只是提供食物，更是傳遞一種「東南亞生活」的精神。<br>在多樣中尋找細緻，忙碌裡找到悠閒，熱鬧中擁有和諧。</p>
+                <p data-i18n="brand.text1b">不論生活如何變化，這裡總有：<br>一碗香氣四溢的喇沙，午夜的海南雞飯，<br>還有，一杯清涼的榴槤冰沙，洗去所有疲憊。</p>
+                </div>
+            
+            </section>
+            <section class="brandbackground2">
+
+                <div class="bd">
+                <h2 data-i18n="brand.slogan2">「根植文化，敢於創新」</h2>
+                <p data-i18n="brand.text2">我們堅持傳承的同時，不會止步於模仿。<br>融合傳統特色與現代風味，創造別具一格的美食體驗。</p>
+                </div>
+                <img src="images/brand2.jpeg" alt="西貢玥南妹">
+            </section>
+            <section class="brandbackground2">
+
+                <img src="images/brand3.jpeg" alt="西貢玥南妹">
+                <div class="bd">
+                <h2 data-i18n="brand.slogan3">「日夜交織，東南亞韻味」</h2>
+                <p data-i18n="brand.text3">從早晨的湯粉，到晚間的串燒，伴隨城市的脈動。</p>
+                </div>
+            
+            </section>
+            <section class="brandbackground2">
+
+                <div class="bd">
+                <h2 data-i18n="brand.slogan4">「東南亞風味，連結心靈！」</h2>
+                <p data-i18n="brand.text4">用勺子品味東南亞的味道。</p>
+                </div>
+                <img src="images/brand4.jpeg" alt="西貢玥南妹">
+            </section>
+    </main> 
+    <footer>
+        <p data-i18n="footer.copyright">Copyright © 2026 NITTAYA（HONG KONG）LIMITED All Rights Reserved.</p>
+    </footer>
+    <footer class="gptl">
+        <p data-i18n="footer.powered">Powered by Go Point Technology Limited</p>
+    </footer>
+    <script>
+        // ========== 語言切換系統 ==========
+        const translations = {
+            "zh-HK": {
+                "title": "品牌介紹",
+                "nav": {"about": "關於我們", "news": "最新資訊", "brand": "品牌介紹", "musteat": "必吃菜式", "shopinfo": "門市資訊", "recruit": "人才招聘"},
+                "brand": {
+                    "title": "品牌介紹",
+                    "slogan1": "「習慣熱情，分享風味」",
+                    "text1": "我們不只是提供食物，更是傳遞一種「東南亞生活」的精神。<br>在多樣中尋找細緻，忙碌裡找到悠閒，熱鬧中擁有和諧。",
+                    "text1b": "不論生活如何變化，這裡總有：<br>一碗香氣四溢的喇沙，午夜的海南雞飯，<br>還有，一杯清涼的榴槤冰沙，洗去所有疲憊。",
+                    "slogan2": "「根植文化，敢於創新」",
+                    "text2": "我們堅持傳承的同時，不會止步於模仿。<br>融合傳統特色與現代風味，創造別具一格的美食體驗。",
+                    "slogan3": "「日夜交織，東南亞韻味」",
+                    "text3": "從早晨的湯粉，到晚間的串燒，伴隨城市的脈動。",
+                    "slogan4": "「東南亞風味，連結心靈！」",
+                    "text4": "用勺子品味東南亞的味道。"
+                },
+                "footer": {"copyright": "Copyright © 2026 NITTAYA（HONG KONG）LIMITED All Rights Reserved.", "powered": "Powered by Go Point Technology Limited"}
+            },
+            "zh-CN": {
+                "title": "品牌介绍",
+                "nav": {"about": "关于我们", "news": "最新资讯", "brand": "品牌介绍", "musteat": "必吃菜式", "shopinfo": "门店信息", "recruit": "人才招聘"},
+                "brand": {
+                    "title": "品牌介绍",
+                    "slogan1": "「习惯热情，分享风味」",
+                    "text1": "我们不只是提供食物，更是传递一种「东南亚生活」的精神。<br>在多样中寻找到细致，忙碌里找到悠闲，热闹中拥有和谐。",
+                    "text1b": "不论生活如何变化，这里总有：<br>一碗香气四溢的喇沙，午夜的海南鸡饭，<br>还有，一杯清凉的榴莲冰沙，洗去所有疲惫。",
+                    "slogan2": "「根植文化，敢于创新」",
+                    "text2": "我们坚持传承的同时，不会止步于模仿。<br>融合传统特色与现代风味，创造别具一格的美食体验。",
+                    "slogan3": "「日夜交织，东南亚韵味」",
+                    "text3": "从早上的汤粉，到晚间的串烧，伴随城市的脉动。",
+                    "slogan4": "「东南亚风味，连接心灵！」",
+                    "text4": "用勺子品味东南亚的味道。"
+                },
+                "footer": {"copyright": "Copyright © 2026 NITTAYA（HONG KONG）LIMITED All Rights Reserved.", "powered": "Powered by Go Point Technology Limited"}
+            }
+        };
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i=0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length); // Remove leading spaces
+                if (c.indexOf(nameEQ) === 0) {
+                    return c.substring(nameEQ.length, c.length);
+                }
+            }
+            return null;
+        }
+
+        let defaultLang = 'zh-CN';
+        let currentLang = defaultLang;
+        try {   
+            currentLang = getCookie('lang') || defaultLang
+            setCookie('lang', currentLang, 7);
+        } catch(error){
+            setCookie('lang', defaultLang, 7);
+        }
+
+        function getValue(obj, path) {
+            const keys = path.split('.');
+            let result = obj;
+            for (let i = 0; i < keys.length; i++) {
+                if (result && result[keys[i]]) {
+                    result = result[keys[i]];
+                } else {
+                    return undefined;
+                }
+            }
+            return result;
+        }
+        function updatePage() {
+            const lang = translations[currentLang];
+            if (!lang) return;
+            document.title = getValue(lang, 'brand.title') || lang.title;
+            document.documentElement.lang = currentLang;
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                const key = el.getAttribute('data-i18n');
+                const value = getValue(lang, key);
+                if (value !== undefined) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.value = value;
+                    } else {
+                        el.innerHTML = value.replace(/\n/g, '<br>');
+                    }
+                }
+            });
+            const btn = document.getElementById('langToggle');
+            if (btn) {
+                btn.textContent = currentLang === 'zh-HK' ? '繁' : '简';
+            }
+        }
+        function toggleLang() {
+            currentLang = currentLang === 'zh-HK' ? 'zh-CN' : 'zh-HK';
+            setCookie('lang', currentLang, 7);
+            updatePage();
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', updatePage);
+        } else {
+            updatePage();
+        }
+        document.querySelector('.menu') && document.querySelector('.menu').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            if (nav) nav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

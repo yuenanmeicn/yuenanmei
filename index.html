@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-HK" id="htmlLang">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西貢玥南妹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <button class="menu">&#9776;</button>
+    <h1>開於我們</h1>
+    <button class="lang-toggle" id="langToggle" type="button" onclick="toggleLang(); return false;">繁</button>
+    <nav>
+    <ul>
+        <li><a href="index.html" data-i18n="nav.about">關於我們</a></li>
+        <li><a href="info.html" data-i18n="nav.news">最新資訊</a></li>
+        <li><a href="brand.html" data-i18n="nav.brand">品牌介紹</a></li>
+        <li><a href="musteat.html" data-i18n="nav.musteat">必吃菜式</a></li>
+        <li><a href="shopinfo.html" data-i18n="nav.shopinfo">門市資訊</a></li>
+        <li><a href="recruit.html" data-i18n="nav.recruit">人才招聘</a></li>
+    </ul>
+    </nav>
+    </header>
+    <main>
+    <section class="slogan">
+    <h2 data-i18n="slogan.title">帶你穿越東南亞，味覺的奇幻旅程！</h2>
+    <P><strong data-i18n="slogan.subtitle">東南亞美食，讓味蕾舞動！</strong></P>
+    <P><a href="https://wa.me/85257977635?text=我想預約訂位" target="_blank" rel="noopener noreferrer" data-i18n="slogan.button" data-i18n-href="slogan.whatsapp">立即預約訂座</a></P>
+    </section>
+
+    <section class="vision">
+    <blockquote data-i18n="vision.quote">東南亞風味，真材實料製作，傳承百年佳餚，勇於創新！</blockquote>
+    </section>
+
+    <section class="info">
+
+    <img src="images/background.jpeg" alt="西貢玥南妹" data-i18n-alt="info.title">
+    <div class="sz">
+    <h2 data-i18n="info.title">西貢玥南妹，即將在深圳開張！</h2>
+    <p data-i18n="info.description">港人北上之選！</p>
+    </div>
+
+    </section>
+
+    <section class="product">
+        <div>
+            <img src="images/p1.jpeg" alt="椰汁芋丸" data-i18n-alt="products.p1.alt">
+            <h3 data-i18n="products.p1.item1.name">椰汁芋丸</h3>
+            <p data-i18n="products.p1.item1.desc">香甜可口，綿滑軟嫩。</p>
+        </div>
+        <div>
+            <img src="images/p2.jpeg" alt="海鹽雪糕椰汁珍多冰" data-i18n-alt="products.p2.alt">
+            <h3 data-i18n="products.p2.item1.name">海鹽雪糕椰汁珍多冰</h3>
+            <p data-i18n="products.p2.item1.desc">清爽可口，口感豐富。</p>
+        </div>
+        <div>
+            <img src="images/p3.jpeg" alt="古仔路椰青沙冰" data-i18n-alt="products.p3.alt">
+            <h3 data-i18n="products.p3.item1.name">古仔路椰青沙冰</h3>
+            <p data-i18n="products.p3.item1.desc">清涼解暑，椰香四溢。</p>
+        </div>
+        <div>
+            <img src="images/p4.jpeg" alt="馬來三色奶茶" data-i18n-alt="products.p4.alt">
+            <h3 data-i18n="products.p4.item1.name">馬來三色奶茶</h3>
+            <p data-i18n="products.p4.item1.desc">濃郁香甜，層次分明。</p>
+        </div>
+        <div>
+            <img src="images/p5.jpeg" alt="玨蘭糕" data-i18n-alt="products.p5.alt">
+            <h3 data-i18n="products.p5.item1.name">玨蘭糕</h3>
+            <p data-i18n="products.p5.item1.desc">香甜軟糯，口感滑順。</p>
+        </div>
+        <div>
+            <img src="images/p6.jpeg" alt="恐龍蛋（雪糕）" data-i18n-alt="products.p6.alt">
+            <h3 data-i18n="products.p6.item1.name">恐龍蛋（雪糕）</h3>
+            <p data-i18n="products.p6.item1.desc">造型獨特，口感豐富。</p>
+        </div>
+    </section>
+    </main> 
+    <footer>
+        <p data-i18n="footer.copyright">Copyright © 2026 NITTAYA（HONG KONG）LIMITED All Rights Reserved.</p>
+    </footer>
+    <footer class="gptl">
+        <p data-i18n="footer.powered">Powered by Go Point Technology Limited</p>
+    </footer>
+    <script>
+        // ========== 最簡單可靠的語言切換系統 ==========
+        
+        // 翻譯數據 - 直接內嵌，不依賴外部文件
+        const translations = {
+            "zh-HK": {
+                "title": "西貢玥南妹",
+                "nav": {
+                    "about": "關於我們",
+                    "news": "最新資訊",
+                    "brand": "品牌介紹",
+                    "musteat": "必吃菜式",
+                    "shopinfo": "門市資訊",
+                    "recruit": "人才招聘"
+                },
+                "slogan": {
+                    "title": "帶你穿越東南亞，味覺的奇幻旅程！",
+                    "subtitle": "東南亞美食，讓味蕾舞動！",
+                    "button": "立即預約訂座",
+                    "whatsapp": "我想預約訂位"
+                },
+                "vision": {
+                    "quote": "東南亞風味，真材實料製作，\n傳承百年佳餚，勇於創新！"
+                },
+                "info": {
+                    "title": "西貢玥南妹，即將在深圳開張！",
+                    "description": "港人北上之選！"
+                },
+                "products": {
+                    "p1": {
+                        "alt": "椰汁芋丸",
+                        "item1": { "name": "椰汁芋丸", "desc": "香甜可口，綿滑軟嫩。" }
+                    },
+                    "p2": {
+                        "alt": "海鹽雪糕椰汁珍多冰",
+                        "item1": { "name": "海鹽雪糕椰汁珍多冰", "desc": "清爽可口，口感豐富。" }
+                    },
+                    "p3": {
+                        "alt": "古仔路椰青沙冰",
+                        "item1": { "name": "古仔路椰青沙冰", "desc": "清涼解暑，椰香四溢。" }
+                    },
+                    "p4": {
+                        "alt": "馬來三色奶茶",
+                        "item1": { "name": "馬來三色奶茶", "desc": "濃郁香甜，層次分明。" }
+                    },
+                    "p5": {
+                        "alt": "玨蘭糕",
+                        "item1": { "name": "玨蘭糕", "desc": "香甜軟糯，口感滑順。" }
+                    },
+                    "p6": {
+                        "alt": "恐龍蛋（雪糕）",
+                        "item1": { "name": "恐龍蛋（雪糕）", "desc": "造型獨特，口感豐富。" }
+                    }
+                },
+                "footer": {
+                    "copyright": "Copyright © 2026 NITTAYA（HONG KONG）LIMITED All Rights Reserved.",
+                    "powered": "Powered by Go Point Technology Limited"
+                }
+            },
+            "zh-CN": {
+                "title": "西贡玥南妹",
+                "nav": {
+                    "about": "关于我们",
+                    "news": "最新资讯",
+                    "brand": "品牌介绍",
+                    "musteat": "必吃菜式",
+                    "shopinfo": "门店信息",
+                    "recruit": "人才招聘"
+                },
+                "slogan": {
+                    "title": "带你穿越东南亚，味觉的奇幻旅程！",
+                    "subtitle": "东南亚美食，让味蕾舞动！",
+                    "button": "立即预约订座",
+                    "whatsapp": "我想预约订位"
+                },
+                "vision": {
+                    "quote": "东南亚风味，真材实料制作，\n传承百年佳肴，勇于创新！"
+                },
+                "info": {
+                    "title": "西贡玥南妹，即将在深圳开张！",
+                    "description": "港人北上之选！"
+                },
+                "products": {
+                    "p1": {
+                        "alt": "椰汁芋丸",
+                        "item1": { "name": "椰汁芋丸", "desc": "香甜可口，绵滑软嫩。" }
+                    },
+                    "p2": {
+                        "alt": "海盐雪糕椰汁珍多冰",
+                        "item1": { "name": "海盐雪糕椰汁珍多冰", "desc": "清爽可口，口感丰富。" }
+                    },
+                    "p3": {
+                        "alt": "古仔路椰青沙冰",
+                        "item1": { "name": "古仔路椰青沙冰", "desc": "清涼解暑，椰香四溢。" }
+                    },
+                    "p4": {
+                        "alt": "马来三色奶茶",
+                        "item1": { "name": "马来三色奶茶", "desc": "浓郁香甜，层次分明。" }
+                    },
+                    "p5": {
+                        "alt": "玨兰糕",
+                        "item1": { "name": "玨兰糕", "desc": "香甜软糯，口感滑顺。" }
+                    },
+                    "p6": {
+                        "alt": "恐龙蛋（雪糕）",
+                        "item1": { "name": "恐龙蛋（雪糕）", "desc": "造型独特，口感丰富。" }
+                    }
+                },
+                "footer": {
+                    "copyright": "Copyright © 2026 NITTAYA（HONG KONG）LIMITED All Rights Reserved.",
+                    "powered": "Powered by Go Point Technology Limited"
+                }
+            }
+        };
+
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for(let i=0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length); // Remove leading spaces
+                if (c.indexOf(nameEQ) === 0) {
+                    return c.substring(nameEQ.length, c.length);
+                }
+            }
+            return null;
+        }
+
+        let defaultLang = 'zh-CN';
+        let currentLang = null;
+        try {   
+            if(getCookie('lang') !== null){
+                currentLang = getCookie('lang');
+            } else {
+                currentLang = defaultLang;
+            }
+            setCookie('lang', currentLang, 7);
+        } catch(error){
+            setCookie('lang', defaultLang, 7);
+        }
+
+        // 獲取嵌套對象的值（例如 "nav.about" -> translations.zh.nav.about）
+        function getValue(obj, path) {
+            const keys = path.split('.');
+            let result = obj;
+            for (let i = 0; i < keys.length; i++) {
+                if (result && result[keys[i]]) {
+                    result = result[keys[i]];
+                } else {
+                    return undefined;
+                }
+            }
+            return result;
+        }
+
+        // 更新頁面語言
+        function updatePage() {
+            const lang = translations[currentLang];
+            if (!lang) return;
+
+            // 更新標題
+            document.title = lang.title;
+            document.documentElement.lang = currentLang;
+
+            // 更新所有 data-i18n 元素
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                const key = el.getAttribute('data-i18n');
+                const value = getValue(lang, key);
+                if (value !== undefined) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.value = value;
+                    } else {
+                        el.innerHTML = value.replace(/\n/g, '<br>');
+                    }
+                }
+            });
+
+            // 更新圖片 alt
+            document.querySelectorAll('[data-i18n-alt]').forEach(function(el) {
+                const key = el.getAttribute('data-i18n-alt');
+                const value = getValue(lang, key);
+                if (value !== undefined) {
+                    el.alt = value;
+                }
+            });
+
+            // 更新 WhatsApp 鏈接
+            document.querySelectorAll('[data-i18n-href]').forEach(function(el) {
+                const key = el.getAttribute('data-i18n-href');
+                const value = getValue(lang, key);
+                if (value !== undefined) {
+                    const href = el.getAttribute('href');
+                    const newHref = href.split('?text=')[0] + '?text=' + encodeURIComponent(value);
+                    el.setAttribute('href', newHref);
+                }
+            });
+
+            // 更新按鈕文字
+            const btn = document.getElementById('langToggle');
+            if (btn) {
+                btn.textContent = currentLang === 'zh-HK' ? '繁' : '简';
+            }
+        }
+
+        // 語言切換函數 - 全局函數，HTML 可以直接調用
+        function toggleLang() {
+            currentLang = currentLang === 'zh-HK' ? 'zh-CN' : 'zh-HK';
+            setCookie('lang', currentLang, 7);
+            updatePage();
+        }
+
+        // 頁面加載時立即更新
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', updatePage);
+        } else {
+            updatePage();
+        }
+
+        // 菜單切換功能
+        document.querySelector('.menu') && document.querySelector('.menu').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            if (nav) nav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

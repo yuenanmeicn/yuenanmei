@@ -1,0 +1,1707 @@
+/* ========== 基礎樣式重置 ========== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", "PingFang TC", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+    color: #2c3e50;
+    overflow-x: hidden;
+    background-color: #fafafa;
+}
+
+/* ========== Header 設計 ========== */
+header {
+    background: linear-gradient(135deg, rgba(35, 28, 26, 0.98), rgba(45, 35, 30, 0.98));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    height: 85px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    color: white;
+    position: absolute;
+    left: 120px;
+    top: 0;
+    line-height: 85px;
+    background-image: url(images/logo.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    text-indent: -9999px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+header ul {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 85px;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    margin-right: 3.5vw;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+header a::before {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff9d00, #ff6f00);
+    transition: width 0.3s ease;
+}
+
+header a:hover {
+    background-color: rgba(255, 157, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+header a:hover::before {
+    width: 70%;
+}
+
+/* ========== 語言切換按鈕 ========== */
+.lang-toggle {
+    position: absolute;
+    right: 15px;
+    top: 22px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10001;
+    pointer-events: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    min-width: 50px;
+    text-align: center;
+}
+
+.lang-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.lang-toggle:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Hero 區域 ========== */
+.slogan {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(images/banner.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 85px;
+    overflow: hidden;
+}
+
+.slogan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 0;
+}
+
+.slogan h2 {
+    font-size: clamp(32px, 5vw, 64px);
+    margin: 20px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1s ease;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+.slogan p {
+    color: #ffeb3b;
+    font-size: clamp(16px, 2.5vw, 22px);
+    margin: 25px;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1.2s ease;
+}
+
+.slogan a {
+    display: inline-block;
+    color: #fff;
+    background: linear-gradient(135deg, #ff9d00, #ff6f00);
+    text-decoration: none;
+    border: none;
+    padding: 16px 56px;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(255, 157, 0, 0.4);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1.4s ease;
+    overflow: hidden;
+}
+
+.slogan a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.slogan a:hover {
+    background: linear-gradient(135deg, #ff6f00, #ff9d00);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(255, 157, 0, 0.5);
+}
+
+.slogan a:hover::before {
+    left: 100%;
+}
+
+/* ========== 動畫效果 ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== Vision 區域 ========== */
+.vision {
+    background: linear-gradient(135deg, #485652, #5a6b68);
+    color: white;
+    min-height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.vision::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.vision blockquote {
+    max-width: 1000px;
+    font-style: italic;
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+/* ========== Info 區域 ========== */
+.info {
+    display: flex;
+    overflow: hidden;
+    background: white;
+}
+
+.info img {
+    width: 50%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info:hover img {
+    transform: scale(1.05);
+}
+
+.sz {
+    width: 50%;
+    background: linear-gradient(135deg, #ffffff, #f8f8f8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 60px;
+}
+
+.sz h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 30px;
+    margin: 20px;
+    color: #231c1a;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.sz p {
+    text-align: center;
+    line-height: 2;
+    font-size: 18px;
+    color: #555;
+    max-width: 500px;
+}
+
+/* ========== 產品卡片 ========== */
+.product {
+    display: flex;
+    background: linear-gradient(135deg, #f5f3f0, #ede9de);
+    justify-content: center;
+    align-items: flex-start;
+    padding: 120px 60px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.product div {
+    width: 320px;
+    text-align: center;
+    background: white;
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    position: relative;
+}
+
+.product div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff9d00, #ff6f00);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.product div:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.product div:hover::before {
+    transform: scaleX(1);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product div:hover img {
+    transform: scale(1.08) rotate(1deg);
+}
+
+.product h3 {
+    font-size: 24px;
+    margin: 20px 0 15px;
+    color: #231c1a;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.product p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* ========== Footer ========== */
+footer {
+    background: linear-gradient(135deg, #1a1a1a, #000);
+    color: #b7b7b7;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gptl {
+    background: linear-gradient(135deg, #0f0f0f, #000);
+    color: #888;
+    min-height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    padding: 18px;
+}
+
+/* ========== 菜單按鈕 ========== */
+.menu {
+    display: none;
+    position: relative;
+    z-index: 10002;
+}
+
+/* ========== 空間不足時隱藏 Logo（簡化版） ========== */
+@media screen and (max-width: 1150px) {
+    header h1 {
+        display: none;
+    }
+}
+
+/* ========== 響應式設計 ========== */
+@media screen and (max-width: 768px) {
+    header {
+        height: 75px;
+    }
+    
+    header h1 {
+        display: flex;
+    }
+    
+    header ul {
+        display: none;
+        flex-direction: column;
+        padding: 20px 0;
+        background: linear-gradient(135deg, rgba(35, 28, 26, 0.98), rgba(45, 35, 30, 0.98));
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 260px;
+        border-radius: 0;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4),
+                    0 0 0 1px rgba(255, 255, 255, 0.1);
+        z-index: 999;
+        overflow: hidden;
+        animation: slideDown 0.3s ease-out;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    header ul::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #ff9d00, #ff6f00, #ff9d00);
+        background-size: 200% 100%;
+        animation: shimmer 2s linear infinite;
+    }
+    
+    @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+    }
+    
+    header ul.show {
+        display: flex;
+    }
+    
+    header li {
+        margin: 4px 12px;
+        list-style: none;
+    }
+    
+    header a {
+        padding: 14px 20px;
+        display: block;
+        border-radius: 12px;
+        color: white;
+        font-weight: 500;
+        font-size: 15px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        border: 1px solid transparent;
+    }
+    
+    header a::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: linear-gradient(135deg, #ff9d00, #ff6f00);
+        transform: scaleY(0);
+        transition: transform 0.3s ease;
+        border-radius: 0 4px 4px 0;
+    }
+    
+    header a:hover {
+        background: linear-gradient(135deg, rgba(255, 157, 0, 0.2), rgba(255, 111, 0, 0.15));
+        transform: translateX(5px);
+        border-color: rgba(255, 157, 0, 0.3);
+        box-shadow: 0 4px 15px rgba(255, 157, 0, 0.2);
+    }
+    
+    header a:hover::before {
+        transform: scaleY(1);
+    }
+    
+    header a:active {
+        transform: translateX(3px);
+    }
+    
+    header h1 {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 140px;
+        line-height: 75px;
+        max-width: calc(100vw - 100px);
+    }
+    
+    .slogan h2 {
+        font-size: 36px;
+        margin: 15px;
+    }
+    
+    .slogan p {
+        font-size: 18px;
+        margin: 20px;
+    }
+    
+    .slogan a {
+        padding: 14px 40px;
+        font-size: 15px;
+    }
+    
+    .slogan {
+        min-height: 100vh;
+        padding-top: 75px;
+        background-attachment: scroll; /* 移動端禁用 fixed */
+    }
+    
+    .menu {
+        display: flex;
+        background: transparent;
+        color: white;
+        font-size: 26px;
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        border: none;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        z-index: 10002;
+        transition: all 0.3s ease;
+    }
+    
+    .menu:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: scale(1.05);
+    }
+    
+    .menu:active {
+        transform: scale(0.95);
+    }
+    
+    .lang-toggle {
+        right: 10px;
+        top: 18px;
+        padding: 8px 16px;
+        font-size: 13px;
+        min-width: 45px;
+    }
+    
+    .info {
+        flex-direction: column;
+    }
+    
+    .info img {
+        width: 100%;
+        max-height: 400px;
+    }
+    
+    .sz {
+        width: 100%;
+        padding: 50px 30px;
+    }
+    
+    .sz h2 {
+        font-size: 32px;
+    }
+    
+    .product {
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 20px;
+        gap: 30px;
+    }
+    
+    .product div {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .vision {
+        padding: 60px 30px;
+        min-height: 240px;
+    }
+    
+    .vision blockquote {
+        font-size: 20px;
+    }
+    
+    /* News 區域響應式 */
+    .news {
+        min-height: 100vh;
+        padding-top: 75px;
+        background-attachment: scroll; /* 移動端禁用 fixed */
+    }
+    
+    .news h2 {
+        font-size: 32px;
+        margin: 15px;
+    }
+    
+    .news p {
+        font-size: 18px;
+        margin: 20px;
+    }
+    
+    .news a {
+        padding: 14px 40px;
+        font-size: 15px;
+    }
+    
+    /* Musteat 區域響應式 */   
+    .musteat h2 {
+        font-size: 36px;
+        margin: 15px;
+    }
+    
+    .musteat p {
+        font-size: 18px;
+        margin: 20px;
+    }
+    
+    .musteat a {
+        padding: 14px 40px;
+        font-size: 15px;
+    }
+
+    .musteat {
+        min-height: 100vh;
+        padding-top: 75px;
+        background-attachment: scroll; /* 移動端禁用 fixed */
+    }
+    
+    /* Brand Background 響應式 */
+    .brandbackground {
+        padding: 90px 15px 40px;
+    }
+    
+    .brandbackground img {
+        width: 95%;
+        margin: 15px;
+        border-radius: 16px;
+    }
+    
+    /* Shop Info 響應式 */
+    .shopinfo {
+        padding: 90px 15px 40px;
+    }
+    
+    .shopinfo img {
+        width: 95%;
+        margin: 15px;
+        border-radius: 16px;
+    }
+    
+    /* Recruit 響應式 */
+    .recruit,
+    .recruit1 {
+        padding: 40px 25px;
+        font-size: 18px;
+        min-height: auto;
+    }
+    
+    /* Footer 響應式 */
+    footer {
+        padding: 20px 15px;
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    .gptl {
+        padding: 15px;
+        font-size: 11px;
+    }
+}
+
+/* 更小屏幕優化 (480px以下) */
+@media screen and (max-width: 480px) {
+    header {
+        height: 70px;
+    }
+    
+    header h1 {
+        width: 120px;
+        line-height: 70px;
+        max-width: calc(100vw - 90px);
+    }
+    
+    .menu {
+        top: 15px;
+        left: 15px;
+        font-size: 24px;
+        width: 35px;
+        height: 35px;
+    }
+    
+    .lang-toggle {
+        right: 8px;
+        top: 15px;
+        padding: 6px 12px;
+        font-size: 12px;
+        min-width: 40px;
+    }
+    
+    header ul {
+        top: 70px;
+        width: 240px;
+        padding: 15px 0;
+    }
+    
+    header li {
+        margin: 3px 10px;
+    }
+    
+    header a {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+    
+    .slogan h2,
+    .news h2,
+    .musteat h2 {
+        font-size: 28px;
+        margin: 10px;
+    }
+    
+    .slogan p,
+    .news p,
+    .musteat p {
+        font-size: 16px;
+        margin: 15px;
+    }
+    
+    .slogan a,
+    .news a,
+    .musteat a {
+        padding: 12px 32px;
+        font-size: 14px;
+    }
+    .sz,
+    .szslogan,
+    .bd,
+    .si {
+        padding: 40px 20px;
+    }
+    
+    .sz h2,
+    .szslogan h2,
+    .bd h2,
+    .si h2 {
+        font-size: 28px;
+    }
+    
+    .product,
+    .musteatmenu,
+    .musteatmenu2 {
+        padding: 60px 15px;
+        gap: 25px;
+    }
+    
+    .product div,
+    .musteatmenu div,
+    .musteatmenu2 div {
+        padding: 25px;
+    }
+    
+    .vision {
+        padding: 50px 20px;
+        min-height: 200px;
+    }
+    
+    .vision blockquote {
+        font-size: 18px;
+        padding: 15px;
+    }
+    
+    .image-slider {
+        width: calc(100vw - 30px);
+        height: 65vw;
+        margin: 15px;
+        border-radius: 12px;
+    }
+    
+    .image-slider::before {
+        border-radius: 12px;
+    }
+    
+    .slider-container {
+        border-radius: 10px;
+    }
+    
+    .slider-indicators {
+        bottom: 12px;
+        padding: 8px 15px;
+        gap: 8px;
+    }
+    
+    .indicator {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .indicator.active {
+        width: 20px;
+    }
+    
+    .brandbackground,
+    .shopinfo {
+        padding: 80px 10px 30px;
+    }
+    
+    .brandbackground img,
+    .shopinfo img {
+        width: 98%;
+        margin: 10px;
+        border-radius: 12px;
+    }
+    
+    .recruit,
+    .recruit1 {
+        padding: 30px 20px;
+        font-size: 16px;
+    }
+    
+    footer {
+        padding: 15px 10px;
+        font-size: 11px;
+    }
+    
+    .gptl {
+        padding: 12px;
+        font-size: 10px;
+    }
+}
+
+/* ========== News 區域 ========== */
+.news {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(images/infobackground.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 85px;
+    overflow: hidden;
+}
+
+.news::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 0;
+}
+
+.news h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-top: 60px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    color: white;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1s ease;
+    text-align: center;
+}
+
+.news p {
+    color: #ffeb3b;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+    font-size: clamp(18px, 2.5vw, 24px);
+    margin: 25px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1.2s ease;
+}
+
+.news a {
+    display: inline-block;
+    color: #fff;
+    background: linear-gradient(135deg, #ff9d00, #ff6f00);
+    text-decoration: none;
+    border: none;
+    padding: 16px 56px;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(255, 157, 0, 0.4);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1.4s ease;
+    overflow: hidden;
+}
+
+.news a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.news a:hover {
+    background: linear-gradient(135deg, #ff6f00, #ff9d00);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(255, 157, 0, 0.5);
+}
+
+.news a:hover::before {
+    left: 100%;
+}
+
+/* ========== Szproduct 區域 ========== */
+.szproduct {
+    display: flex;
+    background: linear-gradient(135deg, #485652, #7a8c8a);
+    overflow: hidden;
+    position: relative;
+}
+
+/* 圖片輪播容器 */
+.image-slider {
+    width: 50vw;
+    height: 50vw;
+    max-height: 600px;
+    position: relative;
+    overflow: hidden;
+    margin: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
+                0 0 0 4px rgba(255, 255, 255, 0.1),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.image-slider::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #ff9d00, #ff6f00, #ff9d00);
+    border-radius: 20px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.image-slider:hover::before {
+    opacity: 0.6;
+}
+
+.image-slider:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5),
+                0 0 0 4px rgba(255, 157, 0, 0.3),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: scale(1.1);
+}
+
+.slider-image.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+}
+
+/* 指示器 */
+.slider-indicators {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+    padding: 12px 24px;
+    border-radius: 30px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}
+
+.indicator.active {
+    background: #ff9d00;
+    width: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 157, 0, 0.6);
+}
+
+.szproduct:hover .slider-image.active {
+    transform: scale(1.02);
+}
+
+.szslogan {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+}
+
+.szslogan h2 {
+    font-size: clamp(24px, 3vw, 32px);
+    margin-bottom: 30px;
+    color: white;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+    .szproduct {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .image-slider {
+        width: calc(100vw - 40px);
+        height: 60vw;
+        max-height: 400px;
+        margin: 20px;
+        border-radius: 16px;
+    }
+    
+    .image-slider::before {
+        border-radius: 16px;
+    }
+    
+    .slider-container {
+        border-radius: 14px;
+    }
+    
+    .slider-image {
+        border-radius: 0;
+    }
+    
+    .slider-indicators {
+        bottom: 15px;
+        padding: 10px 18px;
+        gap: 10px;
+        border-radius: 25px;
+    }
+    
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .indicator.active {
+        width: 25px;
+    }
+    
+    .szslogan {
+        width: 100%;
+        padding: 50px 30px;
+    }
+}
+
+/* ========== Musteat 區域 ========== */
+.musteat {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(images/musteatbackground.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: inherit;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 85px;
+    overflow: hidden;
+}
+
+.musteat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 0;
+}
+
+.musteat h2 {
+    font-size: clamp(40px, 6vw, 64px);
+    margin-top: 60px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    color: white;
+    font-weight: 700;
+    margin: 20px;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1s ease;
+    text-align: center;
+}
+
+.musteat p {
+    color: #ffeb3b;
+    font-size: clamp(16px, 2.5vw, 20px);
+    margin: 25px;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1.2s ease;
+}
+
+.musteat a {
+    display: inline-block;
+    color: #fff;
+    background: linear-gradient(135deg, #ff9d00, #ff6f00);
+    text-decoration: none;
+    border: none;
+    padding: 16px 56px;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(255, 157, 0, 0.4);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1.4s ease;
+    overflow: hidden;
+}
+
+.musteat a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.musteat a:hover {
+    background: linear-gradient(135deg, #ff6f00, #ff9d00);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(255, 157, 0, 0.5);
+}
+
+.musteat a:hover::before {
+    left: 100%;
+}
+
+/* ========== Musteat Menu ========== */
+.musteatmenu,
+.musteatmenu2 {
+    display: flex;
+    background: linear-gradient(135deg, #f5f3f0, #ede9de);
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 60px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.musteatmenu div,
+.musteatmenu2 div {
+    width: 320px;
+    text-align: center;
+    background: white;
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    position: relative;
+}
+
+.musteatmenu div::before,
+.musteatmenu2 div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff9d00, #ff6f00);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.musteatmenu div:hover,
+.musteatmenu2 div:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.musteatmenu div:hover::before,
+.musteatmenu2 div:hover::before {
+    transform: scaleX(1);
+}
+
+.musteatmenu img,
+.musteatmenu2 img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.musteatmenu div:hover img,
+.musteatmenu2 div:hover img {
+    transform: scale(1.08) rotate(1deg);
+}
+
+.musteatmenu h3,
+.musteatmenu2 h3 {
+    font-size: 24px;
+    margin: 20px 0 15px;
+    color: #231c1a;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.musteatmenu p,
+.musteatmenu2 p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #666;
+}
+
+@media screen and (max-width: 768px) {
+    .musteatmenu,
+    .musteatmenu2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 20px;
+        gap: 30px;
+    }
+    
+    .musteatmenu div,
+    .musteatmenu2 div {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* ========== Brand Background ========== */
+.brandbackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px 20px 60px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #fafafa, #f5f5f5);
+}
+
+.brandbackground {
+    position: relative;
+}
+
+.brandbackground img {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+    filter: brightness(1) contrast(1) saturate(1);
+    border: 3px solid transparent;
+}
+
+.brandbackground:hover img {
+    box-shadow: 0 20px 60px rgba(255, 157, 0, 0.3),
+                0 0 0 3px rgba(255, 157, 0, 0.3);
+    filter: brightness(1.08) contrast(1.05) saturate(1.15);
+    border-color: rgba(255, 157, 0, 0.4);
+}
+
+.branding {
+    display: none;
+}
+
+.brandbackground2 {
+    display: flex;
+    overflow: hidden;
+    background: white;
+}
+
+.brandbackground2 {
+    position: relative;
+}
+
+.brandbackground2 img {
+    width: 50%;
+    object-fit: cover;
+    transition: all 0.6s ease;
+    filter: brightness(1) contrast(1) saturate(1);
+    border: 2px solid transparent;
+}
+
+.brandbackground2:hover img {
+    filter: brightness(1.1) contrast(1.08) saturate(1.2);
+    box-shadow: inset 0 0 80px rgba(255, 157, 0, 0.25),
+                0 0 30px rgba(255, 157, 0, 0.2);
+    border-color: rgba(255, 157, 0, 0.3);
+}
+
+.bd {
+    width: 50%;
+    background: linear-gradient(135deg, #ffffff, #f8f8f8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 60px;
+}
+
+.bd h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 30px;
+    color: #231c1a;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.bd p {
+    text-align: center;
+    line-height: 2;
+    font-size: 18px;
+    color: #555;
+    max-width: 500px;
+}
+
+@media screen and (max-width: 768px) {
+    .brandbackground2 {
+        display: none;
+    }
+    
+    .branding {
+        width: 100%;
+        background: linear-gradient(135deg, #ffffff, #f8f8f8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 30px;
+    }
+    
+    .branding h2 {
+        font-size: 32px;
+        margin-bottom: 25px;
+        margin: 20px;
+        color: #231c1a;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    .branding p {
+        text-align: center;
+        line-height: 2;
+        font-size: 16px;
+        color: #555;
+    }
+}
+
+/* ========== Shop Info ========== */
+.shopinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px 20px 60px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #fafafa, #f5f5f5);
+}
+
+.shopinfo {
+    position: relative;
+}
+
+.shopinfo img {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+    filter: brightness(1) contrast(1) saturate(1);
+    border: 3px solid transparent;
+}
+
+.shopinfo:hover img {
+    box-shadow: 0 20px 60px rgba(255, 157, 0, 0.3),
+                0 0 0 3px rgba(255, 157, 0, 0.3);
+    filter: brightness(1.08) contrast(1.05) saturate(1.15);
+    border-color: rgba(255, 157, 0, 0.4);
+}
+
+.shop {
+    display: none;
+}
+
+.shopinfo2 {
+    display: flex;
+    overflow: hidden;
+    background: white;
+}
+
+.shopinfo2 {
+    position: relative;
+}
+
+.shopinfo2 img {
+    width: 50%;
+    object-fit: cover;
+    transition: all 0.6s ease;
+    filter: brightness(1) contrast(1) saturate(1);
+    border: 2px solid transparent;
+}
+
+.shopinfo2:hover img {
+    filter: brightness(1.1) contrast(1.08) saturate(1.2);
+    box-shadow: inset 0 0 80px rgba(255, 157, 0, 0.25),
+                0 0 30px rgba(255, 157, 0, 0.2);
+    border-color: rgba(255, 157, 0, 0.3);
+}
+
+.si {
+    width: 50%;
+    background: linear-gradient(135deg, #ffffff, #f8f8f8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 60px;
+}
+
+.si h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 30px;
+    color: #231c1a;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.si p {
+    text-align: center;
+    line-height: 2;
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.si a {
+    color: #ff9d00;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 18px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.si a:hover {
+    color: #ff6f00;
+    border-bottom-color: #ff6f00;
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 768px) {
+    .shopinfo2 {
+        display: none;
+    }
+    
+    .shop {
+        width: 100%;
+        background: linear-gradient(135deg, #ffffff, #f8f8f8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 30px;
+    }
+    
+    .shop h2 {
+        font-size: 32px;
+        margin-bottom: 25px;
+        color: #231c1a;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    .shop p {
+        text-align: center;
+        line-height: 2;
+        font-size: 16px;
+        color: #555;
+        margin: 10px 0;
+    }
+    
+    .shop a {
+        color: #ff9d00;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border-bottom: 2px solid transparent;
+        font-size: 18px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    
+    .shop a:hover {
+        color: #ff6f00;
+        border-bottom-color: #ff6f00;
+        transform: translateY(-2px);
+    }
+}
+
+/* ========== Recruit ========== */
+.recruit,
+.recruit1 {
+    background: linear-gradient(135deg, #485652, #5a6b68);
+    color: white;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: clamp(20px, 3vw, 25px);
+    line-height: 2;
+    padding: 50px 40px;
+    margin: -5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.recruit::before,
+/*.recruit1::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}*/
+
+.recruit p,
+.recruit1 p {
+    margin: 8px 0;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.recruit1 {
+    min-height: 140px;
+    padding: 40px 30px;
+}
+
+/* ========== 設定圖片的固定大小 ========== */
+.product img {
+    width: 200px; /* 設定圖片的固定寬度 */
+    height: 250px; /* 設定圖片的固定高度 */
+    object-fit: cover; /* 保持圖像比例並填滿容器 */
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        background: linear-gradient(135deg, #1a1a1a, #000);
+        color: #b7b7b7;
+        min-height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        padding: 20px;
+    }
+    
+    .gptl {
+        font-size: 11px;
+        padding: 15px;
+    }
+    
+    .recruit,
+    .recruit1 {
+        padding: 40px 25px;
+        font-size: 18px;
+    }
+}
