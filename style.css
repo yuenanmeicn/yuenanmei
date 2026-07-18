@@ -460,6 +460,22 @@ footer {
         animation: slideDown 0.3s ease-out;
     }
     
+    h1 {
+    color: white;
+    position: absolute;
+    left: 120px;
+    top: 0;
+    line-height: 40px;
+    background-image: url(images/logo.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    text-indent: -9999px;
+    z-index: 1;
+    transition: all 0.3s ease;
+    }
+
     @keyframes slideDown {
         from {
             opacity: 0;
