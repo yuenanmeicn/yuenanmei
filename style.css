@@ -458,6 +458,8 @@ footer {
         z-index: 999;
         overflow: hidden;
         animation: slideDown 0.3s ease-out;
+
+        line-height: 40px;
     }
     
     @keyframes slideDown {
