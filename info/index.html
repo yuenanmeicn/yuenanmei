@@ -1,44 +1,42 @@
 <!DOCTYPE html>
-<html lang="zh-HK">
+<html lang="en" id="htmlLang">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="info.pageTitle">最新資訊</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>YUE NAN MEI</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
     <button class="menu">&#9776;</button>
-    <h1 data-i18n="info.pageTitle">最新資訊</h1>
-    <button class="lang-toggle" id="langToggle" type="button" onclick="toggleLang(); return false;">繁</button>
+    <h1 data-i18n="info.pageTitle">Latest News</h1>
+    <button class="lang-toggle" id="langToggle" type="button" onclick="toggleLang(); return false;">EN</button>
     <nav>
     <ul>
-        <li><a href="/" data-i18n="nav.about">關於我們</a></li>
-        <li><a href="/info/" data-i18n="nav.news">最新資訊</a></li>
-        <li><a href="/brand/" data-i18n="nav.brand">品牌介紹</a></li>
-        <li><a href="/musteat/" data-i18n="nav.musteat">必吃菜式</a></li>
-        <li><a href="/shopinfo/" data-i18n="nav.shopinfo">門市資訊</a></li>
-        <li><a href="/recruit/" data-i18n="nav.recruit">人才招聘</a></li>
+        <li><a href="/" data-i18n="nav.about">About Us</a></li>
+        <li><a href="/info/" data-i18n="nav.news">Latest News</a></li>
+        <li><a href="/brand/" data-i18n="nav.brand">Brand Story</a></li>
+        <li><a href="/musteat/" data-i18n="nav.musteat">Must-Try Dishes</a></li>
+        <li><a href="/shopinfo/" data-i18n="nav.shopinfo">Store Info</a></li>
+        <li><a href="/recruit/" data-i18n="nav.recruit">Careers</a></li>
     </ul>
     </nav>
     </header>
     <main>
     <section class="news">
-    <h2 data-i18n="info.title">最新資訊</h2>
-    <P><strong data-i18n="info.content">我們很高興地宣布，<br>西貢玥南妹將於深圳即將開張！<br>這是我們在內地的第一家分店，<br>旨在為更多的顧客提供地道的東南亞菜。<br>歡迎大家來店品嚐我們的招牌菜式，<br>體驗正宗的東南亞風味！<br>期待與深圳的朋友們分享我們的美食。</strong></P>
-    <P><a href="https://www.amap.com/place/B0JUD5TCPZ" target="_blank" rel="noopener noreferrer" data-i18n="info.address">地址</a></P>
+    <h2 data-i18n="info.title">Latest News</h2>
+    <P><strong data-i18n="info.content">We are thrilled to announce that YUE NAN MEI has soft-opened in Futian, Shenzhen!<br>As our very first store in mainland China, our mission is to serve more customers with authentic Southeast Asian cuisine.<br>We warmly invite everyone to drop by, taste, and experience these genuine flavors.<br>We look forward to sharing our delicious food with more friends in Shenzhen!</strong></P>
+    <P><a href="https://www.amap.com/place/B0JUD5TCPZ" target="_blank" rel="noopener noreferrer" data-i18n="info.address">Address</a></P>
     </section>
     <section class="szproduct">
         <div class="image-slider">
             <div class="slider-container">
-                <img id="image1" src="/images/slider1.jpeg" alt="西貢玥南妹" class="slider-image active">
-                <img id="image2" src="/images/slider2.jpeg" alt="西貢玥南妹" class="slider-image">
-                <img id="image3" src="/images/slider3.jpeg" alt="西貢玥南妹" class="slider-image">
-                <img id="image4" src="/images/slider4.jpeg" alt="西貢玥南妹" class="slider-image">
-                <img id="image5" src="/images/slider5.jpeg" alt="西貢玥南妹" class="slider-image">
-                <img id="image6" src="/images/slider6.jpeg" alt="西貢玥南妹" class="slider-image">
-                <img id="image7" src="/images/slider7.jpeg" alt="西貢玥南妹" class="slider-image">
-                <img id="image8" src="/images/slider8.jpeg" alt="西貢玥南妹" class="slider-image">
+                <img id="image1" src="images/slider1.jpeg" alt="YUE NAN MEI" class="slider-image active">
+                <img id="image2" src="images/slider2.jpeg" alt="YUE NAN MEI" class="slider-image">
+                <img id="image3" src="images/slider3.jpeg" alt="YUE NAN MEI" class="slider-image">
+                <img id="image4" src="images/slider4.jpeg" alt="YUE NAN MEI" class="slider-image">
+                <img id="image5" src="images/slider5.jpeg" alt="YUE NAN MEI" class="slider-image">
+                <img id="image6" src="images/slider6.jpeg" alt="YUE NAN MEI" class="slider-image">
             </div>
             <div class="slider-indicators">
                 <span class="indicator active" data-index="0"></span>
@@ -47,34 +45,35 @@
                 <span class="indicator" data-index="3"></span>
                 <span class="indicator" data-index="4"></span>
                 <span class="indicator" data-index="5"></span>
-                <span class="indicator" data-index="6"></span>
-                <span class="indicator" data-index="7"></span>
             </div>
         </div>
         <div class="szslogan">
-        <h2 data-i18n="info.welcome">歡迎大家來店品嚐我們的招牌菜式，<br>體驗正宗的香港風味！<br>期待與深圳的朋友們分享我們的美食。</h2>
+        <h2 data-i18n="info.welcome">We warmly invite everyone to drop by, taste, and experience these genuine flavors.<br>We look forward to sharing our delicious food with more friends in Shenzhen!</h2>
         </div>
         <script>
-            const images = ["/images/slider1.jpeg", "/images/slider2.jpeg", "/images/slider3.jpeg", "/images/slider4.jpeg", "/images/slider5.jpeg", "/images/slider6.jpeg", "/images/slider7.jpeg", "/images/slider8.jpeg"];
+            const images = [
+                "images/slider1.jpeg", 
+                "images/slider2.jpeg", 
+                "images/slider3.jpeg", 
+                "images/slider4.jpeg", 
+                "images/slider5.jpeg", 
+                "images/slider6.jpeg"
+            ];
             const imageElements = document.querySelectorAll('.slider-image');
             const indicators = document.querySelectorAll('.indicator');
             let index = 0;
             let autoSlideInterval;
     
             function showImage(newIndex) {
-                // 確保索引在有效範圍內
                 if (newIndex < 0) newIndex = images.length - 1;
                 if (newIndex >= images.length) newIndex = 0;
                 
                 index = newIndex;
                 
-                // 移除所有 active 類
                 imageElements.forEach(img => img.classList.remove('active'));
                 indicators.forEach(ind => ind.classList.remove('active'));
                 
-                // 確保圖片元素存在
                 if (imageElements[index] && indicators[index]) {
-                    // 添加 active 類到當前圖片和指示器
                     imageElements[index].classList.add('active');
                     indicators[index].classList.add('active');
                 }
@@ -85,34 +84,28 @@
                 showImage(nextIndex);
             }
     
-            // 點擊指示器切換圖片
             indicators.forEach((indicator, i) => {
                 indicator.addEventListener('click', () => {
-                    // 停止自動輪播
                     if (autoSlideInterval) {
                         clearInterval(autoSlideInterval);
                     }
-                    // 切換到點擊的圖片
                     showImage(i);
-                    // 重新啟動自動輪播
                     autoSlideInterval = setInterval(changeImage, 4000);
                 });
             });
     
-            // 確保所有圖片都預加載
             function preloadImages() {
                 images.forEach((src, i) => {
-                    if (i > 0) { // 第一張已經在 HTML 中
+                    if (i > 0) {
                         const img = new Image();
                         img.src = src;
                     }
                 });
             }
     
-            // 初始化
             preloadImages();
-            showImage(0); // 顯示第一張圖片
-            autoSlideInterval = setInterval(changeImage, 4000); // 每4秒轉換一次
+            showImage(0);
+            autoSlideInterval = setInterval(changeImage, 4000);
         </script>
     
         </section>
@@ -124,31 +117,50 @@
         <p data-i18n="footer.powered">Powered by Go Point Technology Limited</p>
     </footer>
     <script>
-        // ========== 語言切換系統 ==========
         const translations = {
-            "zh-HK": {
-                "title": "最新資訊",
-                "nav": {"about": "關於我們", "news": "最新資訊", "brand": "品牌介紹", "musteat": "必吃菜式", "shopinfo": "門市資訊", "recruit": "人才招聘"},
-                "info": {
-                    "pageTitle": "最新資訊",
-                    "title": "最新資訊",
-                    "content": "我們很高興地宣布，<br>西貢玥南妹將於深圳即將開張！<br>這是我們在內地的第一家分店，<br>旨在為更多的顧客提供地道的東南亞菜。<br>歡迎大家來店品嚐我們的招牌菜式，<br>體驗正宗的東南亞風味！<br>期待與深圳的朋友們分享我們的美食。",
-                    "address": "地址",
-                    "welcome": "歡迎大家來店品嚐我們的招牌菜式，<br>體驗正宗的東南亞風味！<br>期待與深圳的朋友們分享我們的美食。"
+            "en": {
+                "title": "YUE NAN MEI",
+                "nav": {
+                    "about": "About Us",
+                    "news": "Latest News",
+                    "brand": "Brand Story",
+                    "musteat": "Must-Try Dishes",
+                    "shopinfo": "Store Info",
+                    "recruit": "Careers"
                 },
-                "footer": {"copyright": "Copyright © 2026 NITTAYA（HONG KONG）LIMITED All Rights Reserved.", "powered": "Powered by Go Point Technology Limited"}
+                "info": {
+                    "pageTitle": "Latest News",
+                    "title": "Latest News",
+                    "content": "We are thrilled to announce that YUE NAN MEI has soft-opened in Futian, Shenzhen!<br>As our very first store in mainland China, our mission is to serve more customers with authentic Southeast Asian cuisine.<br>We warmly invite everyone to drop by, taste, and experience these genuine flavors.<br>We look forward to sharing our delicious food with more friends in Shenzhen!",
+                    "address": "Address",
+                    "welcome": "We warmly invite everyone to drop by, taste, and experience these genuine flavors.<br>We look forward to sharing our delicious food with more friends in Shenzhen!"
+                },
+                "footer": {
+                    "copyright": "Copyright © 2026 NITTAYA（HONG KONG）LIMITED All Rights Reserved.",
+                    "powered": "Powered by Go Point Technology Limited"
+                }
             },
             "zh-CN": {
-                "title": "最新资讯",
-                "nav": {"about": "关于我们", "news": "最新资讯", "brand": "品牌介绍", "musteat": "必吃菜式", "shopinfo": "门店信息", "recruit": "人才招聘"},
+                "title": "玥南妹",
+                "nav": {
+                    "about": "关于我们",
+                    "news": "最新资讯",
+                    "brand": "品牌介绍",
+                    "musteat": "必吃菜式",
+                    "shopinfo": "门店信息",
+                    "recruit": "人才招聘"
+                },
                 "info": {
                     "pageTitle": "最新资讯",
                     "title": "最新资讯",
-                    "content": "我们很高兴地宣布，<br>西贡玥南妹将于深圳即将开张！<br>这是我们在内地的第一家分店，<br>旨在为更多的顾客提供地道的东南亚菜。<br>欢迎大家来店品尝我们的招牌菜式，<br>体验正宗的东南亚风味！<br>期待与深圳的朋友们分享我们的美食。",
+                    "content": "我们很高兴地宣布玥南妹已于深圳福田试业！<br>这是我们在内地的第一家分店，旨在为更多顾客提供地道东南亚美食。<br>欢迎大家来店品尝及体验正宗东南亚风味特色美食，<br>期待与更多深圳朋友们分享我们的美食。",
                     "address": "地址",
-                    "welcome": "欢迎大家来店品尝我们的招牌菜式，<br>体验正宗的东南亚风味！<br>期待与深圳的朋友们分享我们的美食。"
+                    "welcome": "欢迎大家来店品尝及体验正宗东南亚风味特色美食，<br>期待与更多深圳朋友们分享我们的美食。"
                 },
-                "footer": {"copyright": "Copyright © 2026 NITTAYA（HONG KONG）LIMITED All Rights Reserved.", "powered": "Powered by Go Point Technology Limited"}
+                "footer": {
+                    "copyright": "Copyright © 2026 NITTAYA（HONG KONG）LIMITED All Rights Reserved.",
+                    "powered": "Powered by Go Point Technology Limited"
+                }
             }
         };
         
@@ -167,7 +179,7 @@
             const ca = document.cookie.split(';');
             for(let i=0; i < ca.length; i++) {
                 let c = ca[i];
-                while (c.charAt(0) === ' ') c = c.substring(1, c.length); // Remove leading spaces
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
                 if (c.indexOf(nameEQ) === 0) {
                     return c.substring(nameEQ.length, c.length);
                 }
@@ -178,7 +190,7 @@
         let defaultLang = 'zh-CN';
         let currentLang = null;
         try {   
-            if(getCookie('lang') !== null){
+            if(getCookie('lang') !== null && (getCookie('lang') === 'zh-CN' || getCookie('lang') === 'en')){
                 currentLang = getCookie('lang');
             } else {
                 currentLang = defaultLang;
@@ -200,10 +212,11 @@
             }
             return result;
         }
+
         function updatePage() {
             const lang = translations[currentLang];
             if (!lang) return;
-            document.title = getValue(lang, 'info.pageTitle') || lang.title;
+            document.title = getValue(lang, 'title') || lang.title;
             document.documentElement.lang = currentLang;
             document.querySelectorAll('[data-i18n]').forEach(function(el) {
                 const key = el.getAttribute('data-i18n');
@@ -218,19 +231,22 @@
             });
             const btn = document.getElementById('langToggle');
             if (btn) {
-                btn.textContent = currentLang === 'zh-HK' ? '繁' : '简';
+                btn.textContent = currentLang === 'en' ? 'EN' : '简';
             }
         }
+
         function toggleLang() {
-            currentLang = currentLang === 'zh-HK' ? 'zh-CN' : 'zh-HK';
+            currentLang = currentLang === 'en' ? 'zh-CN' : 'en';
             setCookie('lang', currentLang, 7);
             updatePage();
         }
+
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', updatePage);
         } else {
             updatePage();
         }
+
         document.querySelector('.menu') && document.querySelector('.menu').addEventListener('click', function() {
             const nav = document.querySelector('nav ul');
             if (nav) nav.classList.toggle('show');
