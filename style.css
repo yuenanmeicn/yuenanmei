@@ -1,4 +1,3 @@
-/* ========== 基礎樣式重置 ========== */
 * {
     padding: 0;
     margin: 0;
@@ -18,7 +17,6 @@ body {
     background-color: #fafafa;
 }
 
-/* ========== Header 設計 ========== */
 header {
     background: linear-gradient(135deg, rgba(35, 28, 26, 0.98), rgba(45, 35, 30, 0.98));
     backdrop-filter: blur(20px);
@@ -95,7 +93,6 @@ header a:hover::before {
     width: 70%;
 }
 
-/* ========== 語言切換按鈕 ========== */
 .lang-toggle {
     position: absolute;
     right: 15px;
@@ -132,7 +129,6 @@ header a:hover::before {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ========== Hero 區域 ========== */
 .slogan {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(images/banner.jpeg);
     background-repeat: no-repeat;
@@ -224,7 +220,6 @@ header a:hover::before {
     left: 100%;
 }
 
-/* ========== 動畫效果 ========== */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -236,7 +231,6 @@ header a:hover::before {
     }
 }
 
-/* ========== Vision 區域 ========== */
 .vision {
     background: linear-gradient(135deg, #485652, #5a6b68);
     color: white;
@@ -278,7 +272,6 @@ header a:hover::before {
     padding: 20px;
 }
 
-/* ========== Info 區域 ========== */
 .info {
     display: flex;
     overflow: hidden;
@@ -323,7 +316,6 @@ header a:hover::before {
     max-width: 500px;
 }
 
-/* ========== 產品卡片 ========== */
 .product {
     display: flex;
     background: linear-gradient(135deg, #f5f3f0, #ede9de);
@@ -393,7 +385,6 @@ header a:hover::before {
     color: #666;
 }
 
-/* ========== Footer ========== */
 footer {
     background: linear-gradient(135deg, #1a1a1a, #000);
     color: #b7b7b7;
@@ -417,21 +408,18 @@ footer {
     padding: 18px;
 }
 
-/* ========== 菜單按鈕 ========== */
 .menu {
     display: none;
     position: relative;
     z-index: 10002;
 }
 
-/* ========== 空間不足時隱藏 Logo（簡化版） ========== */
 @media screen and (max-width: 1150px) {
     header h1 {
         display: none;
     }
 }
 
-/* ========== 響應式設計 ========== */
 @media screen and (max-width: 768px) {
     header {
         height: 75px;
@@ -566,7 +554,7 @@ footer {
     .slogan {
         min-height: 100vh;
         padding-top: 75px;
-        background-attachment: scroll; /* 移動端禁用 fixed */
+        background-attachment: scroll;
     }
     
     .menu {
@@ -643,11 +631,10 @@ footer {
         font-size: 20px;
     }
     
-    /* News 區域響應式 */
     .news {
         min-height: 100vh;
         padding-top: 75px;
-        background-attachment: scroll; /* 移動端禁用 fixed */
+        background-attachment: scroll;
     }
     
     .news h2 {
@@ -664,8 +651,7 @@ footer {
         padding: 14px 40px;
         font-size: 15px;
     }
-    
-    /* Musteat 區域響應式 */   
+     
     .musteat h2 {
         font-size: 36px;
         margin: 15px;
@@ -684,10 +670,9 @@ footer {
     .musteat {
         min-height: 100vh;
         padding-top: 75px;
-        background-attachment: scroll; /* 移動端禁用 fixed */
+        background-attachment: scroll;
     }
     
-    /* Brand Background 響應式 */
     .brandbackground {
         padding: 90px 15px 40px;
     }
@@ -698,7 +683,6 @@ footer {
         border-radius: 16px;
     }
     
-    /* Shop Info 響應式 */
     .shopinfo {
         padding: 90px 15px 40px;
     }
@@ -709,7 +693,6 @@ footer {
         border-radius: 16px;
     }
     
-    /* Recruit 響應式 */
     .recruit,
     .recruit1 {
         padding: 40px 25px;
@@ -717,7 +700,6 @@ footer {
         min-height: auto;
     }
     
-    /* Footer 響應式 */
     footer {
         padding: 20px 15px;
         font-size: 12px;
@@ -730,7 +712,6 @@ footer {
     }
 }
 
-/* 更小屏幕優化 (480px以下) */
 @media screen and (max-width: 480px) {
     header {
         height: 70px;
@@ -889,7 +870,6 @@ footer {
     }
 }
 
-/* ========== News 區域 ========== */
 .news {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(images/infobackground.jpeg);
     background-repeat: no-repeat;
@@ -980,7 +960,6 @@ footer {
     left: 100%;
 }
 
-/* ========== Szproduct 區域 ========== */
 .szproduct {
     display: flex;
     background: linear-gradient(135deg, #485652, #7a8c8a);
@@ -988,7 +967,6 @@ footer {
     position: relative;
 }
 
-/* 圖片輪播容器 */
 .image-slider {
     width: 50vw;
     height: 50vw;
@@ -1057,7 +1035,6 @@ footer {
     z-index: 1;
 }
 
-/* 指示器 */
 .slider-indicators {
     position: absolute;
     bottom: 25px;
@@ -1170,7 +1147,6 @@ footer {
     }
 }
 
-/* ========== Musteat 區域 ========== */
 .musteat {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(images/musteatbackground.jpeg);
     background-repeat: no-repeat;
@@ -1262,7 +1238,6 @@ footer {
     left: 100%;
 }
 
-/* ========== Musteat Menu ========== */
 .musteatmenu,
 .musteatmenu2 {
     display: flex;
@@ -1357,7 +1332,6 @@ footer {
     }
 }
 
-/* ========== Brand Background ========== */
 .brandbackground {
     display: flex;
     justify-content: center;
@@ -1478,7 +1452,6 @@ footer {
     }
 }
 
-/* ========== Shop Info ========== */
 .shopinfo {
     display: flex;
     justify-content: center;
@@ -1633,7 +1606,6 @@ footer {
     }
 }
 
-/* ========== Recruit ========== */
 .recruit,
 .recruit1 {
     background: linear-gradient(135deg, #485652, #5a6b68);
@@ -1653,17 +1625,6 @@ footer {
 }
 
 .recruit::before,
-/*.recruit1::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-    animation: rotate 20s linear infinite;
-}*/
-
 .recruit p,
 .recruit1 p {
     margin: 8px 0;
@@ -1677,11 +1638,10 @@ footer {
     padding: 40px 30px;
 }
 
-/* ========== 設定圖片的固定大小 ========== */
 .product img {
-    width: 200px; /* 設定圖片的固定寬度 */
-    height: 250px; /* 設定圖片的固定高度 */
-    object-fit: cover; /* 保持圖像比例並填滿容器 */
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
