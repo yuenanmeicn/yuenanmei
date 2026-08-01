@@ -26,7 +26,6 @@
     <section class="slogan">
     <h2 data-i18n="slogan.title">Take you through Southeast Asia, a fantastical journey of taste!</h2>
     <P><strong data-i18n="slogan.subtitle">Southeast Asian cuisine, let your taste buds dance!</strong></P>
-    <P><a href="tel:+85261511771" data-i18n="slogan.button">Call to Reserve</a></P>
     </section>
 
     <section class="vision">
@@ -113,8 +112,7 @@
                 },
                 "slogan": {
                     "title": "Take you through Southeast Asia, a fantastical journey of taste!",
-                    "subtitle": "Southeast Asian cuisine, let your taste buds dance!",
-                    "button": "Call to Reserve"
+                    "subtitle": "Southeast Asian cuisine, let your taste buds dance!"
                 },
                 "vision": {
                     "quote": "Authentic Southeast Asian flavors, made with genuine ingredients,\npassing down century-old recipes while daring to innovate!"
@@ -178,8 +176,7 @@
                 },
                 "slogan": {
                     "title": "带你穿越东南亚，味觉的奇幻旅程！",
-                    "subtitle": "东南亚美食，让味蕾舞动！",
-                    "button": "立即预订座"
+                    "subtitle": "东南亚美食，让味蕾舞动！"
                 },
                 "vision": {
                     "quote": "东南亚风味，真材实料制作，\n传承百年佳肴，勇于创新！"
@@ -269,7 +266,6 @@
             setCookie('lang', defaultLang, 7);
         }
 
-        // 獲取嵌套對象的值
         function getValue(obj, path) {
             const keys = path.split('.');
             let result = obj;
@@ -283,16 +279,13 @@
             return result;
         }
 
-        // 更新頁面語言
         function updatePage() {
             const lang = translations[currentLang];
             if (!lang) return;
 
-            // 更新標題與語言屬性
             document.title = lang.title;
             document.documentElement.lang = currentLang;
 
-            // 更新所有 data-i18n 元素
             document.querySelectorAll('[data-i18n]').forEach(function(el) {
                 const key = el.getAttribute('data-i18n');
                 const value = getValue(lang, key);
@@ -305,7 +298,6 @@
                 }
             });
 
-            // 更新圖片 alt
             document.querySelectorAll('[data-i18n-alt]').forEach(function(el) {
                 const key = el.getAttribute('data-i18n-alt');
                 const value = getValue(lang, key);
@@ -314,28 +306,24 @@
                 }
             });
 
-            // 更新切換按鈕文字
             const btn = document.getElementById('langToggle');
             if (btn) {
                 btn.textContent = currentLang === 'en' ? 'EN' : '简';
             }
         }
 
-        // 語言切換函數
         function toggleLang() {
             currentLang = currentLang === 'en' ? 'zh-CN' : 'en';
             setCookie('lang', currentLang, 7);
             updatePage();
         }
 
-        // 頁面加載時更新
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', updatePage);
         } else {
             updatePage();
         }
 
-        // 菜單切換功能
         document.querySelector('.menu') && document.querySelector('.menu').addEventListener('click', function() {
             const nav = document.querySelector('nav ul');
             if (nav) nav.classList.toggle('show');
