@@ -1540,6 +1540,16 @@ footer {
     margin: 10px 0;
 }
 
+.si .addressp {
+    color: #ff9d00;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 18px;
+    margin-top: 10px;
+    display: inline-block;
+}
 .shop .addressp {
     color: #ff9d00;
     text-decoration: none;
